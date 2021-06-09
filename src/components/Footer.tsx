@@ -6,9 +6,13 @@ const { Footer } = Layout;
 const { useBreakpoint } = Grid;
 
 const footerElements = [
+  {
+    description: '$BDE',
+    link: helpUrls.developerResources,
+  },
   { description: 'Discord', link: helpUrls.discord },
   { description: 'Twitter', link: helpUrls.telegram },
-  { description: 'Token Address', link: helpUrls.solanaBeach },
+  { description: 'Solana Beach', link: helpUrls.solanaBeach },
 ];
 
 export const CustomFooter = () => {
@@ -17,9 +21,9 @@ export const CustomFooter = () => {
   return (
     <Footer
       style={{
-        height: '60px',
-        paddingBottom: 20,
-        paddingTop: 20,
+        height: '45px',
+        paddingBottom: 10,
+        paddingTop: 10,
       }}
     >
       <Row align="middle" gutter={[16, 4]}>

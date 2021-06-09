@@ -14,7 +14,7 @@ const Title = styled.div`
 
 const SizeTitle = styled(Row)`
   padding: 20px 0 14px;
-  color: #434a59;
+  color: #faad14;
 `;
 
 const MarkPriceTitle = styled(Row)`
@@ -40,8 +40,8 @@ const Line = styled.div`
 
 const Price = styled.div`
   position: absolute;
-  right: 5px;
-  color: white;
+  right: 15px;
+  color: gold;
 `;
 
 export default function Orderbook({ smallScreen, depth = 7, onPrice, onSize }) {
@@ -186,8 +186,8 @@ const OrderbookRow = React.memo(
             data-width={sizePercent + '%'}
             data-bgcolor={
               side === 'buy'
-                ? 'rgba(65, 199, 122, 0.6)'
-                : 'rgba(242, 60, 105, 0.6)'
+                ? 'rgba(25, 145, 255, 0.6)'
+                : 'rgba(145, 85, 225, 0.6)'
             }
           />
           <Price onClick={onPriceClick}>{formattedPrice}</Price>
@@ -206,9 +206,9 @@ const MarkPriceComponent = React.memo(
 
     let markPriceColor =
       markPrice > previousMarkPrice
-        ? '#41C77A'
+        ? '#1890ff'
         : markPrice < previousMarkPrice
-        ? '#F23B69'
+        ? '#9254DE'
         : 'white';
 
     let formattedMarkPrice =

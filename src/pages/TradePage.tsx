@@ -176,13 +176,13 @@ function TradePageInner() {
                 title="Market address"
                 trigger="click"
               >
-                <InfoCircleOutlined style={{ color: '#2abdd2' }} />
+                <InfoCircleOutlined style={{ color: '#002329' }} />
               </Popover>
             </Col>
           ) : null}
           <Col>
             <PlusCircleOutlined
-              style={{ color: '#2abdd2' }}
+              style={{ color: '#002329' }}
               onClick={() => setAddMarketVisible(true)}
             />
           </Col>
@@ -236,7 +236,7 @@ function MarketSelector({
     <Select
       showSearch
       size={'large'}
-      style={{ width: 200 }}
+      style={{ width: 250 }}
       placeholder={placeholder || 'Select a market'}
       optionFilterProp="name"
       onSelect={onSetMarketAddress}
@@ -277,7 +277,7 @@ function MarketSelector({
           ))}
         </OptGroup>
       )}
-      <OptGroup label="Markets">
+      <OptGroup label="MARKETS">
         {markets
           .sort((a, b) =>
             extractQuote(a.name) === 'USDT' && extractQuote(b.name) !== 'USDT'
@@ -300,9 +300,9 @@ function MarketSelector({
               key={nanoid()}
               name={name}
               style={{
-                padding: '10px',
+                padding: '12px',
                 // @ts-ignore
-                backgroundColor: i % 2 === 0 ? 'rgb(39, 44, 61)' : null,
+                backgroundColor: i % 3 === 0 ? 'rgb(35, 44, 61)' : null,
               }}
             >
               {name} {deprecated ? ' (Deprecated)' : null}

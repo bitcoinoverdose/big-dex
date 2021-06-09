@@ -95,11 +95,11 @@ export default function AppSearch(props) {
       }}
       notFoundContent={null} // todo: make this search history
       style={{
-        width: props.width || '300px',
+        width: props.width || '0px',
         transition: props.focussed ? 'width 0.1s ease 0.1s' : '',
       }}
       dropdownStyle={{
-        width: props.width || '300px',
+        width: props.width || '0px',
       }}
       dropdownMatchSelectWidth={false}
       suffixIcon={

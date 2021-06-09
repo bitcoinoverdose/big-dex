@@ -39,10 +39,10 @@ export default function DepositDialog({ onClose, baseOrQuote }) {
       onCancel={onClose}
     >
       <div style={{ paddingTop: '20px' }}>
-        <p style={{ color: 'white' }}>Mint address:</p>
+        <p style={{ color: 'gold' }}>Mint address:</p>
         <p style={{ color: 'rgba(255,255,255,0.5)' }}>{coinMint.toBase58()}</p>
         <div>
-          <p style={{ color: 'white' }}>SPL Deposit address:</p>
+          <p style={{ color: 'gold' }}>SPL Deposit address:</p>
           <p style={{ color: 'rgba(255,255,255,0.5)' }}>
             {account ? (
               account.pubkey.toBase58()

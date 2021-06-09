@@ -11,7 +11,7 @@ const Title = styled.div`
 `;
 const SizeTitle = styled(Row)`
   padding: 20px 0 14px;
-  color: #434a59;
+  color: #faad14;
 `;
 
 export default function PublicTrades({ smallScreen }) {
@@ -56,7 +56,7 @@ export default function PublicTrades({ smallScreen }) {
               <Col
                 span={8}
                 style={{
-                  color: trade.side === 'buy' ? '#41C77A' : '#F23B69',
+                  color: trade.side === 'buy' ? '#40a9ff' : '#9254de',
                 }}
               >
                 {market?.tickSize && !isNaN(trade.price)
@@ -72,7 +72,7 @@ export default function PublicTrades({ smallScreen }) {
                     )
                   : trade.size}
               </Col>
-              <Col span={8} style={{ textAlign: 'right', color: '#434a59' }}>
+              <Col span={8} style={{ textAlign: 'right', color: '#8c8c8c' }}>
                 {trade.time && new Date(trade.time).toLocaleTimeString()}
               </Col>
             </Row>

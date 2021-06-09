@@ -1,5 +1,6 @@
 import {
   InfoCircleOutlined,
+  // eslint-disable-next-line
   PlusCircleOutlined,
   SettingOutlined,
 } from '@ant-design/icons';
@@ -20,7 +21,7 @@ import AppSearch from './AppSearch';
 import { getTradePageUrl } from '../utils/markets';
 
 const Wrapper = styled.div`
-  background-color: #0d1017;
+  background-color: #002329;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -30,23 +31,23 @@ const Wrapper = styled.div`
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  color: #2abdd2;
+  color: #faad14;
   font-weight: bold;
   cursor: pointer;
   img {
-    height: 30px;
+    height: 50px;
     margin-right: 8px;
   }
 `;
 
 const EXTERNAL_LINKS = {
-  '/learn': 'https://serum-academy.com/en/serum-dex/',
-  '/add-market': 'https://serum-academy.com/en/add-market/',
-  '/wallet-support': 'https://serum-academy.com/en/wallet-support',
+  '/learn': 'https://bigdefienergy.com',
+  '/add-market': 'https://bigdefienergy.com/how-to-add-bde-on-sollet/',
+  '/wallet-support': 'https://explorer.solana.com/address/H5gczCNbrtso6BqGKihF97RaWaxpUEZnFuFUKK4YX3s2',
   '/dex-list': 'https://serum-academy.com/en/dex-list/',
   '/developer-resources': 'https://serum-academy.com/en/developer-resources/',
-  '/explorer': 'https://explorer.solana.com',
-  '/srm-faq': 'https://projectserum.com/srm-faq',
+  '/explorer': 'https://explorer.solana.com/address/H5gczCNbrtso6BqGKihF97RaWaxpUEZnFuFUKK4YX3s2',
+  '/srm-faq': 'https://bigdefienergy.com/whitepaper-official/',
   '/swap': 'https://swap.projectserum.com',
 };
 
@@ -142,7 +143,7 @@ export default function TopBar() {
       <Wrapper>
         <LogoWrapper onClick={() => history.push(tradePageUrl)}>
           <img src={logo} alt="" />
-          {'Big DEX'}
+          {'BIG DEX'}
         </LogoWrapper>
         <Menu
           mode="horizontal"
@@ -160,29 +161,29 @@ export default function TopBar() {
             TRADE
           </Menu.Item>
           {!searchFocussed && (
-            <Menu.Item key="/swap" style={{ margin: '0 10px' }}>
+            <Menu.Item key="/swap" style={{ margin: '0 0px' }}>
               <a
                 href={EXTERNAL_LINKS['/swap']}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                SWAP
+               
               </a>
             </Menu.Item>
           )}
           {connected && (!searchFocussed || location.pathname === '/balances') && (
-            <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
-              BALANCES
+            <Menu.Item key="/balances" style={{ margin: '0 0px' }}>
+              
             </Menu.Item>
           )}
           {connected && (!searchFocussed || location.pathname === '/orders') && (
-            <Menu.Item key="/orders" style={{ margin: '0 10px' }}>
-              ORDERS
+            <Menu.Item key="/orders" style={{ margin: '0 0px' }}>
+              
             </Menu.Item>
           )}
           {connected && (!searchFocussed || location.pathname === '/convert') && (
-            <Menu.Item key="/convert" style={{ margin: '0 10px' }}>
-              CONVERT
+            <Menu.Item key="/convert" style={{ margin: '0 0px' }}>
+              
             </Menu.Item>
           )}
           {(!searchFocussed || location.pathname === '/list-new-market') && (
@@ -192,7 +193,7 @@ export default function TopBar() {
           )}
           {!searchFocussed && (
             <Menu.SubMenu
-              title="LEARN"
+              title="$BDE"
               onTitleClick={() =>
                 window.open(EXTERNAL_LINKS['/learn'], '_blank')
               }
@@ -204,7 +205,7 @@ export default function TopBar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Adding a market
+                  Add to Wallet
                 </a>
               </Menu.Item>
               <Menu.Item key="/wallet-support">
@@ -213,34 +214,7 @@ export default function TopBar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Supported wallets
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/dex-list">
-                <a
-                  href={EXTERNAL_LINKS['/dex-list']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  DEX list
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/developer-resources">
-                <a
-                  href={EXTERNAL_LINKS['/developer-resources']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Developer resources
-                </a>
-              </Menu.Item>
-              <Menu.Item key="/explorer">
-                <a
-                  href={EXTERNAL_LINKS['/explorer']}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Solana block explorer
+                  Block Explorer
                 </a>
               </Menu.Item>
               <Menu.Item key="/srm-faq">
@@ -249,7 +223,7 @@ export default function TopBar() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  SRM FAQ
+                  Whitepaper
                 </a>
               </Menu.Item>
             </Menu.SubMenu>
@@ -263,32 +237,27 @@ export default function TopBar() {
           }}
         >
           <AppSearch
-            onFocus={() => setSearchFocussed(true)}
+            onFocus={() => setSearchFocussed(false)}
             onBlur={() => setSearchFocussed(false)}
             focussed={searchFocussed}
-            width={searchFocussed ? '350px' : '35px'}
+            width={searchFocussed ? '' : ''}
           />
         </div>
         <div>
           <Row
             align="middle"
-            style={{ paddingLeft: 5, paddingRight: 5 }}
+            style={{ paddingLeft: 0, paddingRight: 0 }}
             gutter={16}
           >
-            <Col>
-              <PlusCircleOutlined
-                style={{ color: '#2abdd2' }}
-                onClick={() => setAddEndpointVisible(true)}
-              />
-            </Col>
+            
             <Col>
               <Popover
                 content={endpoint}
                 placement="bottomRight"
-                title="URL"
+                title="Project Serum"
                 trigger="hover"
               >
-                <InfoCircleOutlined style={{ color: '#2abdd2' }} />
+                <InfoCircleOutlined style={{ color: '#faad14' }} />
               </Popover>
             </Col>
             <Col>

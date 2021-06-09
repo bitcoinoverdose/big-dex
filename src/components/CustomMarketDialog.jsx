@@ -124,7 +124,7 @@ export default function CustomMarketDialog({
 
   return (
     <Modal
-      title={'Add custom market'}
+      title={'Add Custom Market'}
       visible={visible}
       onOk={onSubmit}
       okText={'Add'}
