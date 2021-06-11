@@ -78,7 +78,7 @@ function TradePageInner() {
   });
 
   useEffect(() => {
-    document.title = marketName ? `${marketName} — Serum` : 'Serum';
+    document.title = marketName ? `${marketName} — BIG DEX` : 'BIG DEX';
   }, [marketName]);
 
   const changeOrderRef = useRef<
@@ -300,7 +300,7 @@ function MarketSelector({
               key={nanoid()}
               name={name}
               style={{
-                padding: '12px',
+                padding: '10px',
                 // @ts-ignore
                 backgroundColor: i % 3 === 0 ? 'rgb(35, 44, 61)' : null,
               }}
@@ -331,7 +331,7 @@ const RenderNormal = ({ onChangeOrderRef, onPrice, onSize }) => {
   return (
     <Row
       style={{
-        minHeight: '900px',
+        minHeight: '800px',
         flexWrap: 'nowrap',
       }}
     >
@@ -358,7 +358,7 @@ const RenderSmall = ({ onChangeOrderRef, onPrice, onSize }) => {
     <>
       <Row
         style={{
-          height: '900px',
+          height: '800px',
         }}
       >
         <Col flex="auto" style={{ height: '100%', display: 'flex' }}>

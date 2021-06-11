@@ -19,7 +19,7 @@ const SizeTitle = styled(Row)`
 
 const MarkPriceTitle = styled(Row)`
   padding: 20px 0 14px;
-  font-weight: 700;
+  font-weight: 600;
 `;
 
 const Line = styled.div`

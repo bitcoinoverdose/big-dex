@@ -222,7 +222,7 @@ export default function StandaloneBalancesDisplay() {
               <Col>{balances && balances.unsettled}</Col>
             </RowBox>
             <RowBox align="middle" justify="space-around">
-              <Col style={{ width: 150 }}>
+              <Col style={{ width: 100 }}>
                 <ActionButton
                   block
                   size="large"
