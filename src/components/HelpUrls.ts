@@ -6,6 +6,6 @@ export const helpUrls = {
   telegram: 'https://twitter.com/BigDefi',
   github: 'https://github.com/project-serum',
   projectSerum: 'https://projectserum.com/',
-  developerResources: 'bigdefienergy.com',
+  developerResources: 'https://bigdefienergy.com/whitepaper-official/',
   solanaBeach: 'https://solanabeach.io/token/H5gczCNbrtso6BqGKihF97RaWaxpUEZnFuFUKK4YX3s2',
 };
