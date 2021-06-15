@@ -277,7 +277,7 @@ function MarketSelector({
           ))}
         </OptGroup>
       )}
-      <OptGroup label="MARKETS">
+      <OptGroup label="BIG MARKETS">
         {markets
           .sort((a, b) =>
             extractQuote(a.name) === 'USDT' && extractQuote(b.name) !== 'USDT'
